@@ -1,53 +1,29 @@
-/*
-    Logic：
-        主要采用原生 JavaScript，
-        只有在发送 Ajax 请求是才使用 JQuery
-    
-    ===
-    1、登录注册页面的切换逻辑
-
-    2、Ajax发送及接受响应逻辑
-    ===
-*/
-
-
-// 封装选择器, 采用ES6箭头函数写法
-const getSelector = ele => {
-    return typeof ele === "string" ? document.querySelector(ele) : "";
-}
-
-
-// 登录注册载入
-
-const containerShow = () => {
-    var show = getSelector(".container")
-    show.className += " container-show"
-}
-
-
-window.onload = containerShow;
-
-
-// 登录注册页切换
+// 封装一下该功能模块
 ((window, document) => {
 
-    // 登录 -> 注册
-    let toSignBtn = getSelector(".toSign"),
-        toLoginBtn = getSelector(".toLogin")
-        loginBox = getSelector(".login-box"),
-        signBox = getSelector(".sign-box");
-    
-    toSignBtn.onclick = () => {
-        loginBox.className += ' animate_login';
-        signBox.className += ' animate_sign';
+    // 封装一个类似JQuery的选择器
+    const getSelector = ele => {
+        return typeof ele === "string" ? document.querySelector(ele): "";
     }
 
-    toLoginBtn.onclick = () => {
-        loginBox.classList.remove("animate_login");
-        signBox.classList.remove("animate_sign");
+    // 封装一个类似JQuery的添加类方法
+    const addClass = (ele, cls) => {
+        ele.classList.add(cls)
     }
 
+    // 封装一个类似JQuery的删除类方法
+    const removeClass = (ele, cls) => {
+        ele.classList.remove(cls);
+        
+    }
 
-})(window, document);
+    // 获取 input和label 的DOM对象
+    let input = getSelector("input"),
+        label = getSelector("label");
 
-// Ajax 请求发送
+    input.onfocus = addClass.bind(this, label, "animation_one");
+    input.onblur = function() {
+        if(input.value === "") removeClass(label, "animation_one")
+    }
+
+})(window, document)
