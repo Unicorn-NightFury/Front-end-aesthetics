@@ -3,54 +3,40 @@
     margin: 0px;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-}
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.container {
-    position: relative;
+.btn {
+    position: fixed;
     height: 40px;
-    width: 250px;
-}
-.container::after{
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    display: block;
-    content: " ";
-    height: 2px;
-    background-color: #4fc08d;
-}
-
-label {
-    font-size: 30px;
-    color: #4fc08d;
-    position: absolute;
-    top: 0px;
-    font-weight: 200;
-    z-index: 1;
-    transition: .3s ease-in-out;
+    width: 100px;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -20px;
+    background-color: orange;
+    color: white;
+    box-shadow: 0px 5px 7px rgba(200, 200, 200, .8);
+    line-height: 40px;
+    text-align: center;
 }
 
-input {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    padding: 0px 5px;
-    color: #4fc08d;
+.btn:hover {
+    cursor: pointer;
+    animation: cute .5s;
 }
 
-.animation_one {
-    font-size: 16px;
-    top: -10px;
+@keyframes cute {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    25%,
+    75% {
+        transform:scale(1.1, .9);
+    }
+
+    50% {
+        transform: scale(.9, 1.1);
+    }
 }
