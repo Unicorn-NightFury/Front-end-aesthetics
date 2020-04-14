@@ -1,0 +1,74 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    height: 24px;
+    width: 24px;
+    background-color: #222;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    height: 2px;
+    width: 14px;
+    background-color: #fff;
+    left: 5px;
+    transition: .3s ease;
+}
+
+.top {
+    top: 4px;
+}
+
+.middle {
+    top: 10px;
+}
+
+.bottom {
+    top: 16px;
+}
+
+
+.container-hover .line {
+    background-color: #87daff;
+}
+.container-hover .top {
+    top: 7px;
+    width: 7px;
+    left: 12px;
+    transform: rotate(45deg);
+}
+.container-hover .bottom {
+    top: 13px;
+    transform: rotate(-45deg);
+    left: 12px;
+    width: 7px;
+}
+
+.container-click .line {
+    background-color: #87daff;
+    left: 5px;
+}
+.container-click .middle{
+    opacity: 0;
+}
+
+.container-click .top {
+    transform: rotate(-45deg);
+    width: 14px;
+    top: 12px;
+}
+.container-click .bottom {
+    transform: rotate(45deg);
+    width: 14px;
+    top: 12px;
+}
