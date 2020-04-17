@@ -6,23 +6,26 @@
 .container {
     height: 24px;
     width: 24px;
-    background-color: #222;
     position: absolute;
     left: 0px;
+    right: 0px;
     top: 0px;
     bottom: 0px;
-    right: 0px;
     margin: auto;
+    background-color: black;
     cursor: pointer;
+    z-index: 2;
 }
 
 .line {
-    position: absolute;
-    height: 2px;
-    width: 14px;
     background-color: #fff;
+    display: block;
+    position: absolute;
     left: 5px;
+    width: 14px;
+    height: 2px;
     transition: .3s ease;
+
 }
 
 .top {
@@ -42,33 +45,46 @@
     background-color: #87daff;
 }
 .container-hover .top {
-    top: 7px;
     width: 7px;
     left: 12px;
+    top: 7px;
     transform: rotate(45deg);
 }
 .container-hover .bottom {
+    width: 7px;
+    left: 12px;
     top: 13px;
     transform: rotate(-45deg);
-    left: 12px;
-    width: 7px;
 }
 
 .container-click .line {
     background-color: #87daff;
-    left: 5px;
 }
-.container-click .middle{
+.container-click .top {
+    width: 14px;
+    left: 5px;
+    top: 12px;
+    transform: rotate(-45deg);
+}
+.container-click .middle {
     opacity: 0;
 }
-
-.container-click .top {
-    transform: rotate(-45deg);
-    width: 14px;
-    top: 12px;
-}
 .container-click .bottom {
-    transform: rotate(45deg);
     width: 14px;
+    left: 5px;
     top: 12px;
+    transform: rotate(45deg);
 }
+
+
+#root {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background-color: #222;
+    left: -500px;
+    transition: .5s ease;
+}
+
+
+

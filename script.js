@@ -1,25 +1,19 @@
 ((window, document) => {
 
-    const $ = ele =>  typeof ele === "string" ? document.querySelector(ele): ""
+    const $ = ele => typeof ele === "string" ? document.querySelector(ele) : "";
 
-    const container = $(".container");
 
-    container.onmouseenter = () => {
-        container.classList.add("container-hover")
-    }
-    container.onmouseleave = () => {
-        container.classList.remove("container-hover")
-    }
-    container.onclick = () => {
-        container.classList.remove("container-hover")
-        container.classList.add("container-click")
-    }
-    window.onclick = (e) => {
-        if(e.target !== container) {
-        container.classList.remove("container-click")
-            
-        }
-    }
+    const con = $(".container");
+    con.onmouseenter = () => con.classList.add("container-hover");
+    con.onmouseleave = () => con.classList.remove("container-hover");
 
+    con.onclick = () => {
+        con.classList.remove("container-hover");
+        con.classList.add("container-click");
+    }
+    window.onclick = e => {
+        if( e.target.className.split(' ')[0] !== "container" && e.target.className.split(' ')[0] !== "line" ) 
+            con.classList.remove("container-click");
+    }
 
 })(window, document)
