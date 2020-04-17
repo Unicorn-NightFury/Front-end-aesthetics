@@ -27,5 +27,5 @@ HTML+CSS+JavaScript 轻松构建简约、清爽的输入框🍉
 
 [Demo_5](https://github.com/Unicorn-NightFury/Front-end-aesthetics/tree/Demo_5) (2020.4.14, branch -> Demo_5)
 
-一个富有苹果设计感的按钮，这很苹果🍎
+用 HTML+CSS ，再外加一点点JS，做一个让细节控欲罢不能的按钮吧！这很苹果🍎
 
