@@ -29,3 +29,6 @@ HTML+CSS+JavaScript 轻松构建简约、清爽的输入框🍉
 
 用 HTML+CSS ，再外加一点点JS，做一个让细节控欲罢不能的按钮吧！这很苹果🍎
 
+[Demo 6](https://github.com/Unicorn-NightFury/Front-end-aesthetics/tree/Demo_6) (2020.8.7,  branch -> Demo_6)
+
+用 HTML + CSS 实现一个简单清爽的字节跳动风格的 loading 特效
